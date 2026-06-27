@@ -1,2 +1,16 @@
 # Wipro-Database-Assignments
-Assignment 1: (Intro to RDBMS) NORMALIZATION
+
+## Student Details
+
+- **Name:** Insha Shahnawaz
+- **Enrollment No:** LNCDBTC21007
+- **Email ID:** inshashahnawaz444@gmail.com
+- **PBLApp ID:** DB_261370065
+
+- ---
+
+## About
+
+This repository contains Database Management System (DBMS) assignments completed as part of the Wipro TalentNext Program.
+
+---
