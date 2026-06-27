@@ -14,3 +14,8 @@
 This repository contains Database Management System (DBMS) assignments completed as part of the Wipro TalentNext Program.
 
 ---
+## Assignments
+
+- [Assignment 1 - Normalization](./Assignment-1-Normalization)
+- Assignment 2
+- Assignment 3
