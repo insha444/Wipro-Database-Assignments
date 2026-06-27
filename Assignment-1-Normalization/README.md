@@ -1,5 +1,11 @@
 # Assignment 1 – Database Normalization
 
+**Name:** Insha Shahnawaz  
+**Enrollment No:** LNCDBTC21007  
+**PBLApp ID:** DB_261370065
+
+---
+
 
 # Question 1: Normalize the following table into First Normal Form (1NF)
 
