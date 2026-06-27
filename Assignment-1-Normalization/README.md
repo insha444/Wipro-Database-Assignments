@@ -49,14 +49,10 @@ The **Hobbies** column contains multiple values in a single attribute. According
 
 ## Explanation
 
-Assume the composite key is:
-
-**(Empno, Training)**
-
 Functional Dependencies:
 
-- (Empno, Training) → Training_Date
 - Empno → Dept
+- (Empno, Training) → Training_Date
 
 Since **Dept** depends only on **Empno** and not on the entire composite key, a partial dependency exists.
 
@@ -129,3 +125,10 @@ To achieve 3NF, separate the Sports and Fees information into another table.
 | Football | 90 |
 
 ---
+## Conclusion
+
+- 1NF removes repeating groups and multi-valued attributes.
+- 2NF removes partial dependencies.
+- 3NF removes transitive dependencies.
+
+Thus, the given relations have been normalized successfully.
