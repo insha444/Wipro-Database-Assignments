@@ -17,5 +17,5 @@ This repository contains Database Management System (DBMS) assignments completed
 ## Assignments
 
 - [Assignment 1 - Normalization](./Assignment-1-Normalization)
-- Assignment 2
+- [Assignment 2 - SQL Mini Project](Assignment-2-SQL-MiniProject/README.md)
 - Assignment 3
