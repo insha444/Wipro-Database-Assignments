@@ -7,12 +7,11 @@
 - PBLApp ID: DB_261370065
 
 ## About
-This assignment covers creating tables, inserting data, updating/deleting records,
-and writing queries/views/synonyms/indexes as part of the Wipro TalentNext DBMS program.
+This assignment covers creating tables, inserting data, updating/deleting records, and writing queries/views/synonyms/indexes as part of the Wipro TalentNext DBMS program.
 
 ## 1. Create Tables
 
-\`\`\`sql
+```sql
 CREATE TABLE LEDGE_Details (
     Ledge_Name     VARCHAR2(20) PRIMARY KEY,
     Ledge_Manager  VARCHAR2(30),
@@ -41,11 +40,11 @@ CREATE TABLE EMP_Bill (
     CONSTRAINT fk_eb_emp  FOREIGN KEY (Empno) REFERENCES EMP_Details(Empno),
     CONSTRAINT fk_eb_bill FOREIGN KEY (Bill)  REFERENCES BILL_Details(Bill)
 );
-\`\`\`
+```
 
 ## 2. Insert Data
 
-\`\`\`sql
+```sql
 INSERT INTO LEDGE_Details VALUES ('Jaasy Ledge',   'Rajen', 'Rajesh Nagar');
 INSERT INTO LEDGE_Details VALUES ('Rajesh Ledge',  'Rajen', 'Silver Nagar');
 INSERT INTO LEDGE_Details VALUES ('Basaley Ledge', 'John',  'Sea Road');
@@ -61,11 +60,11 @@ INSERT INTO BILL_Details VALUES ('SClass',    'EDP Corporation');
 INSERT INTO EMP_Bill VALUES (101, 'ClassSQL', 'A');
 INSERT INTO EMP_Bill VALUES (102, 'SQLClass', 'A');
 INSERT INTO EMP_Bill VALUES (103, 'SClass',   'A');
-\`\`\`
+```
 
 ## 3. Updates / Deletes
 
-\`\`\`sql
+```sql
 -- Employee 101 moved to Basaley Ledge
 UPDATE EMP_Details SET Ledge_Name = 'Basaley Ledge' WHERE Empno = 101;
 
@@ -73,11 +72,11 @@ UPDATE EMP_Details SET Ledge_Name = 'Basaley Ledge' WHERE Empno = 101;
 DELETE FROM EMP_Bill    WHERE Empno = 102;
 DELETE FROM EMP_Details WHERE Empno = 102;
 DELETE FROM LEDGE_Details WHERE Ledge_Name = 'Rajesh Ledge';
-\`\`\`
+```
 
 ## 4. HR Reports
 
-\`\`\`sql
+```sql
 -- Empno, First_Name, Ledge_Name for every employee
 SELECT Empno, First_Name, Ledge_Name FROM EMP_Details;
 
@@ -94,4 +93,9 @@ SELECT e.Empno, e.First_Name, e.Last_Name, e.Ledge_Name,
 FROM EMP_Details e
 JOIN LEDGE_Details l ON e.Ledge_Name = l.Ledge_Name;
 
--- Synonym EMP for
+-- Synonym EMP for EMP_Details
+CREATE SYNONYM EMP FOR EMP_Details;
+
+-- Index on Bill column of BILL_Details
+CREATE INDEX idx_bill ON BILL_Details(Bill);
+```
